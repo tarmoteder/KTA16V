@@ -15,10 +15,18 @@
     
 <?php
 
-include "functions.php";
+    
+include "include.inc";
 
+    
+    
+back_home();
+menu($files_arr);
+    
 echo "<strong>Tere KTA-16V!</strong><br>";
 
+
+    
 echo '<div></div>';
 
 vremja();
