@@ -11,3 +11,4 @@ KTA-16E materjalid minu aines
  
  PHP manual: http://php.net/
  PHP tutorial: https://www.tutorialspoint.com/php/
+ HTAccess: http://www.htaccesstools.com
