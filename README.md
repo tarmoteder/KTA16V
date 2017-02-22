@@ -5,3 +5,9 @@ KTA-16E materjalid minu aines
 2. Github Education pack
 3. repositories/branches
 4. edit documents
+
+
+
+
+
+http://alternativeto.net/software/wamp/
