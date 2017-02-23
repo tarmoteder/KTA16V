@@ -29,7 +29,10 @@ echo "<strong>Tere KTA-16V!</strong><br>";
 echo '<div></div>';
 
 vremja();
-    
+
+echo "<br>";
+counter();  
+GetUserIP()
 ?>
     
 </html>

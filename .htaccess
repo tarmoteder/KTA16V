@@ -1,6 +1,6 @@
  AuthType Basic
  AuthName "Protected"
- AuthUserFile C:\wamp\www\kta16v\.htpasswd
+ AuthUserFile C:\xampp\htdocs\kta16v\.htpasswd
  Require valid-user
 
 
