@@ -19,6 +19,8 @@ echo "<strong>Tere KTA-16V!</strong><br>";
     
 echo '<div></div>';
 // Comment for github
+    
+// Second comment for github
 
 vremja();
 echo '<script>greeting()</script>';
