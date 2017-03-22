@@ -1,6 +1,6 @@
 <?php
 
-include "include.inc";
+// include "include.inc";
 
 $server = "localhost";
 $user = "root";
@@ -23,36 +23,58 @@ function my_query($connect){
     
   if ($result -> num_rows > 0){
       while($row = $result->fetch_assoc()){
-          echo "id: ".$row["ID"]." Name: ".$row["Name"]." Familyname: ".$row["Family_name"]." Timestamp: ".$row["Insert_date"]."<br>";
+          echo "id: ".$row["ID"]." Name: ".$row["First_name"]." Familyname: ".$row["Family_name"]." Timestamp: ".$row["Insert_date"]."<br>";
       } 
   } else { echo "Pustaja baza";} 
-    
-//    var_dump($result);
-//    
 }
+// ishem po adnomu
+    
+function search_by_id($connect){
+    $sql = 'SELECT * from kta16v.grupp WHERE ID='.$_GET['ID'];
+    $result = $connect ->query($sql);
+    if ($result -> num_rows > 0){
+      while($row = $result->fetch_assoc()){
+          echo "id: ".$row["ID"]." Name: ".$row["First_name"]." Familyname: ".$row["Family_name"]." Timestamp: ".$row["Insert_date"]."<br>";
+      }} else { echo "Net takogo stroka";}
+    
+}
+    
+
+//    
+
 // my_query($connect);
 
 function my_insert($connect){
-    $sql = "INSERT INTO kta16v.grupp (Name,Family_name) VALUES ('Vladimir','Timošenko')";
+    /// debugprint_r($_POST);
+
+    $sql = "INSERT INTO kta16v.grupp (First_name, Family_name) VALUES ('".$_POST['nimi']."','".$_POST['Family_name']."')";
     $result = $connect ->query($sql);
 }
 
+
+
+
 function my_delete($connect) {
-    $sql = "DELETE FROM kta16v.grupp WHERE Name='Vladimir'";
+    $sql = "DELETE FROM kta16v.grupp WHERE First_name='".$_POST['nimi']."'";
     $result = $connect ->query($sql);
 }
 // my_delete($connect);
 // my_insert($connect);
 
 function show_button($connect){
-echo "<form action='' method='post'>
+echo "
     <input type='submit' name='show' value='Pokazhy'>" ;
-
-if(isset($_POST['show'])){
-    my_query($connect);
+    
+function show_1_button($connect){
+    
+echo "
+    <input type='submit' name='show_1' value='Pokazhy opredeljonnõje'>" ;    
+}
+if(isset($_GET['ID'])){
+    search_by_id($connect);
 }}
 function delete_button($connect){
-echo "<form action='' method='post'>
+echo "
     <input type='submit' name='delete' value='Udali'>" ;
 
 if(isset($_POST['delete'])){
@@ -60,14 +82,14 @@ if(isset($_POST['delete'])){
 }}
 
 function add_button($connect){
-echo "<form action='' method='post'>
+echo "
     <input type='submit' name='add' value='Dobav'>" ;
 
 if(isset($_POST['add'])){
     my_insert($connect);
 }}
 
-
+/*
 show_button($connect);
 delete_button($connect);
 add_button($connect);
@@ -75,6 +97,6 @@ add_button($connect);
 echo "<br>";
 echo "GET väärtused:".var_dump($_GET)."<br>";
 echo "POST väärtused:".var_dump($_POST);
-
+*/
 mysqli_close($connect);
 ?>
