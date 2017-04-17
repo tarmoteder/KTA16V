@@ -1,4 +1,4 @@
-<?php
+add<?php
 
 // include "include.inc";
 

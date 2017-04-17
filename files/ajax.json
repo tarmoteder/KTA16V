@@ -1,0 +1,11 @@
+{
+	"zagalovka":"AJAX thhroug JSON",
+	"tockki":{
+		"tochka1": "0- uninitialized",
+		"tochka2": "1 - loading",
+		"tochka3": "2 - loaded",
+		"tochka4": "3 - interactive",
+		"tochka5": "4 - complete"
+			}
+}
+

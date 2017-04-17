@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<XML-content>
+	<zagalovka>AJAX XML</zagalovka>
+		<tochki>
+			<tochka>0 - uninitialized</tochka>
+			<tochka>1 - loading</tochka>
+			<tochka>2 - loaded</tochka>
+			<tochka>3 - interactive</tochka>
+			<tochka>4 - complete</tochka>
+			<tochka>4 - complete</tochka>
+		</tochki>
+</XML-content>
+
+
+    

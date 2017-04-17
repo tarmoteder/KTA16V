@@ -4,9 +4,9 @@
  Require valid-user
 
 
-<files "*.txt">
-deny from all
-</files>
+# <files "*.txt">
+# deny from all
+# </files>
 <files "*.inc">
 deny from all
 </files>
